@@ -61,6 +61,7 @@
 #let Rec = "Rec"
 #let sin = "sen"
 #let Xor = $#h(0.2375em)"\u{22BB}"#h(0.2375em)$
+#let limit = $limits("lim")$
 
 #let indent_first_line(doc) = {
     set par(spacing: 0.65em, first-line-indent: 1em)

@@ -18,9 +18,13 @@ Se intenta en este apunte dar un entendimiento intuitivo y no formal de las func
 == Cociente
 
 = Gráfica de una función
-#todo[]
+Dada una función $f$ su gráfica es el conjunto:
+$ G_f = { (x, f(x)): x in Dom(f) } $
+$ forall x, y in RR space [ (x, f(x)) in RR <=> x in Dom(f)] $
 == Representación gráfica
+#todo[]
 === Prueba de la recta vertical
+#todo[]
 
 = Propiedades de las funciones
 #todo[]
