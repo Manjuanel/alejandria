@@ -1,25 +1,27 @@
 #import "../lib.typ" : *
 #show: init.with(debug: true)
 
-#title[Calculo Integral]
+#title[Cálculo Integral]
 
 = Sumas inferiores y superiores
 == Partición de un intervalo
 Sea $[a, b]$ un intervalo, $P$ es partición de $[a, b]$ si:
-+ $exists n in NN space abs(P) = n + 1$
-+ $forall i in NN_0 space (0 <= i <= n => t_i in P)$
-+ $forall i, j in NN_0 space (0 <= i < j <= n => a < t_i < t_j < b)$
++ $abs(P) = n in NN$
++ $forall i in NN_0 space (i <= n => t_i in P)$
++ $t_0 = a$
++ $t_n = b$
++ $forall t_i, t_j in P space (i < j => t_i < t_j)$
 
 == Ínfimos y supremos
-Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$, $P$ una partición del intervalo $[a, b]$ y un número $k in NN$ tal que $k < abs(P)$ y sea $I_k = [t_(k-1), t_k]$ entonces se definen para ella los siguientes:
+Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$, $P$ una partición del intervalo $[a, b]$ y un número $k in NN$ tal que $k <= abs(P)$ y sea $I_k = [t_(k-1), t_k]$ entonces se definen para ella los siguientes:
 $ m_k = limits("inf")_I_k space f " y " M_k = limits("sup")_I_k space f $
 
 == Suma inferior y superior
-Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$, $P$ una partición del intervalo $[a, b]$ y un número $k in NN$ tal que $k < abs(P)$ y sea $Delta t_k = t_k - t_(k-1)$ entonces se definen la *suma inferior* y la *suma superior* como:
+Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$, $P$ una partición del intervalo $[a, b]$ y un número $k in NN$ tal que $k <= abs(P)$ y sea $Delta t_k = t_k - t_(k-1)$ entonces se definen la *suma inferior* y la *suma superior* como:
 $ L(f, P) = sum^n_(k=1) m_k Delta t_k " y " U(f, P) = sum^n_(k=1) M_k Delta t_k $
 
 == Lemas
-Sean $f: [a, b] -> RR$ una función acotada, $P$ una partición de $[a, b]$ y $k in NN$ tal que $k < abs(P)$:
+Sean $f: [a, b] -> RR$ una función acotada, $P$ una partición de $[a, b]$ y $k in NN$ tal que $k <= abs(P)$:
 + $L(f, P) <= U(f, P)$
     - Esto es porque $forall k (m_k <= M_k and Delta t_k >= 0) => forall k (m_k Delta t_k <= M_k Delta t_k)$
 
@@ -30,6 +32,8 @@ Sean $f: [a, b] -> RR$ una función acotada, $P$ una partición de $[a, b]$ y $k
     - Se demuestra considerando la partición $T = P union Q$ y utilizando el segundo lema.
 
 = Funciones integrables según Riemann
+== Conjunto de particiones de un intervalo
+Dados dos números reales $a$ y $b$ el conjunto que tiene por elementos a todas las particiones del intervalo $[a, b]$
 == Integral inferior y superior
 Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$ se llaman *integral inferior* e *integral superior* respectivamente a:
 $ underline(integral)_a^b f = sup { L(f, P): P in powerset([a, b])} " y " overline(integral)_a^b f = inf { U(f, P): P in powerset([a, b])} $
@@ -55,4 +59,4 @@ $ forall epsilon > 0 space exists P (P "partición de "[a, b] and U(f, P) - L(f,
 #todo[Demostración]
 
 == Particiones regulares
-Dado un intervalo $[a, b]$ y un número $n in NN$ entonces $P_n$ es una partición regular sobre el mismo solo si $forall k (Delta t_k = (b-a)/n)$
+Dado un intervalo $[a, b]$ y un número $n in NN$ entonces $P_n$ es una partición regular sobre el mismo solo si $abs(P_n) = n + 1 and forall k in NN space (k <= n + 1 => Delta t_k = (b-a)/n)$ quedando $t_k = k dot (b-a)/n + a$
