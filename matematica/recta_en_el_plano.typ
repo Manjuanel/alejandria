@@ -9,6 +9,7 @@
 #let vectorial = math.and
 
 #title[Recta en el plano]
+Una recta en el plano es un lugar geométrico del plano definido por dos puntos $P$ y $Q$ y se nota $arrow.l.r(P Q)$ tal que un tercer punto $R$ está contenido en la recta si y solo si $arrow(P Q) parallel arrow(P R)$
 
 = Recta
 Dado $P$ un punto en el plano y $arrow(u)$ un vector no nulo entonces la recta $r$ que pasa por $P$ en la dirección de $arrow(u)$ es el conjunto de puntos $Q$ tal que:

@@ -38,10 +38,10 @@ Dados dos números reales $a$ y $b$ el conjunto que tiene por elementos a todas 
 Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$ se llaman *integral inferior* e *integral superior* respectivamente a:
 $ underline(integral)_a^b f = sup { L(f, P): P in powerset([a, b])} " y " overline(integral)_a^b f = inf { U(f, P): P in powerset([a, b])} $
 
-La integral inferior es menor o igual que la integral superior. Esto es porque por el tercer lema:
-$ L(f, P) <= limits("inf")_Q space U(f, Q) = overline(integral)_a^b f $
-$ "y" $
-$ underline(integral)_a^b f = limits("sup")_P space L(f, Q) <= U(f, Q) $
+La integral inferior es menor o igual que la integral superior:
+$ underline(integral)_a^b f <= overline(integral)_a^b f $
+Esto es porque por el tercer lema:
+$ underline(integral)_a^b f = limits("sup")_P space L(f, P) <= limits("inf")_Q space U(f, Q) = overline(integral)_a^b f $
 
 == Integral de Riemann
 Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$ es integrable según Riemann si la integral inferior es igual a la integral superior que son entonces iguales a la integral de f. Se nota:

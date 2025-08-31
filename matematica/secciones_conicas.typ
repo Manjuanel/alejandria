@@ -2,11 +2,10 @@
 #show: init.with(debug: true)
 
 #title[Secciones cónicas]
-#todo[Revisar el apunte de recta e incluir en algún lugar conceptos de geometría analítica como espacio geométrico]
 
 = Conceptos iniciales
 == Doble cono recto
-Se genera al rotar una recta al rededor de otra recta secante a la primera.
+Se genera al rotar al rededor de una recta llamada *eje* una recta secante al eje cuyas distintas posiciones toman el nombre de *generatrices* del cono.
 
 == Sección cónica
 Una sección cónica es la intersección entre un plano y un doble cono recto y se representan en el plano.
@@ -16,7 +15,10 @@ Una sección cónica es la intersección entre un plano y un doble cono recto y 
 - Elipse
 - Parábola
 - Hipérbola
-- Recta
+- Degeneradas:
+    - Recta
+    - Punto
+    - Rectas concurrentes
 
 = Circunferencia
 Es el conjunto de los puntos del plano que equidistan de un punto que es el *centro* a distancia del *radio*. Simbólicamente las ecuaciones que describen a la circunferencia con centro $C(x_0, y_0)$, un punto de la circunferencia $P(x, y)$ y radio $r in RR$:
