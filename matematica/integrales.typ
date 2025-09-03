@@ -60,3 +60,41 @@ $ forall epsilon > 0 space exists P (P "partición de "[a, b] and U(f, P) - L(f,
 
 == Particiones regulares
 Dado un intervalo $[a, b]$ y un número $n in NN$ entonces $P_n$ es una partición regular sobre el mismo solo si $abs(P_n) = n + 1 and forall k in NN space (k <= n + 1 => Delta t_k = (b-a)/n)$ quedando $t_k = k dot (b-a)/n + a$
+
+Una partición regular $P_n$ es par si $abs(P_n)/2 in.not NN$ e impar si $abs(P_n)/2 in NN$
+
+== Continuidad uniforme
+Dada una función $f$ definida se dice uniformemente continua si tomando $x, y in Dom(f)$
+$ forall epsilon > 0 space exists delta > 0 space forall x, y space ( abs(x - y) < delta => abs(f(x) - f(y)) < epsilon) $
+
+=== Teorema
+Si $f: [a, b] -> RR$ es continua, entonces es uniformemente continua.
+
+#todo[Demostración]
+
+=== Teorema
+Si $f: [a, b] -> RR$ es continua, entonces es integrable.
+
+Notar que la condición de continuidad es suficiente a la integrabilidad pero no necesaria.
+
+#todo[Demostración, involucra usar el teorema previo, usar la condición de integrabilidad que usa $epsilon$ y elegir una partición con todo $Delta t_k < delta$]
+
+=== Proposición
+Si $f: [a, b] -> RR$ es monótona entonces es integrable.
+
+== Propiedad de aditividad de la integral
+Dada $f: [a, b] -> RR$, entonces $f$ es integrable en $[a, b]$ si y solo si para todo $c in (a, b)$ se da que es integrable en $[a, c]$ y en $[c, b]$, osea:
+$ integral_a^b f = integral_a^c f + integral_c^b f $
+
+#todo[Demostración: Usa la integrabilidad con $epsilon$, tomando una partición que contiene a $c$ y dividiéndola en dos y dar que $U = U_1 + U_2$]
+
+Se definen $integral_a^a f = 0$ y $integral_b^a f = - integral_a^b f$
+
+= Algebra de integrales
+Sean $c in RR$, $f$ y $g$ funciones integrables en $[a, b]$ entonces $c f$ y $f + g$ también son integrables en dicho intervalo.
+
++ $integral_a^b (c f) = c dot integral_a^b f$
+
++ $integral_a^b (f + g) = integral_a^b f + integral_a^b g$
+
+Dadas dos funciones $f$ integrable en $[a, b]$ y $g = f$ salvo para alguna cantidad finita de puntos donde difieren entonces g es integrable en $[a, b]$ y $integral_a^b f = integral_a^b g$
