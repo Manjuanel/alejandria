@@ -106,6 +106,16 @@ Los puntos que pertenecen a una hipérbola que también pertenecen al eje focal 
 Si la ordenada de ambos focos es la misma entonces también la comparten con el centro y los focos quedan definidos por $F_1(x_0 - c + a, y_0)$ y $F_2(x_0 + c - a, y_0)$ pues queda uno a la izquierda del centro y otro a la derecha. Trabajando algebraicamente la ley que define a la elipse y definiendo $b = sqrt(c^2 - a^2)$ entonces la elipse es:
 $ P(x, y) in Epsilon(F_1, F_2, a) <=> (x - x_0)^2/a^2 - (y - y_0)^2/b^2 = 1 $
 
+=== Asíntotas
+La rectas que contienen al centro $C(x_0, y_0)$ y a cualquier $P(x_0 #text(red)[$plus.minus$] a, y_0 #text(blue)[$plus.minus$] b)$ son las asíntotas de la hipérbola, son dos.
+
 == Caso vertical
 Si la abscisa de ambos focos es la misma entonces con un razonamiento similar al anterior queda.
 $ P(x, y) in Epsilon(F_1, F_2, a) <=> (y - y_0)^2/a^2  - (x - x_0)^2/b^2 = 1 $
+
+=== Asíntotas
+La rectas que contienen al centro $C(x_0, y_0)$ y a cualquier $P(x_0 #text(red)[$plus.minus$] b, y_0 #text(blue)[$plus.minus$] a)$ son las asíntotas de la hipérbola, son dos.
+
+=== Caso degenerado
+La siguiente ecuación describe un lugar geométrico del plano igual a la union de dos rectas secantes.
+$ (x - x_0)^2/a^2 - (y-y_0)^2/b^2 = 0 $
