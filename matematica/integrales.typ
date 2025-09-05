@@ -98,3 +98,41 @@ Sean $c in RR$, $f$ y $g$ funciones integrables en $[a, b]$ entonces $c f$ y $f 
 + $integral_a^b (f + g) = integral_a^b f + integral_a^b g$
 
 Dadas dos funciones $f$ integrable en $[a, b]$ y $g = f$ salvo para alguna cantidad finita de puntos donde difieren entonces g es integrable en $[a, b]$ y $integral_a^b f = integral_a^b g$
+
+= Propiedades de orden
+== Cota de una integral
+Sean $f: [a, b] -> RR$ y $m,M in RR$ con $f$ acotada por $forall x in Dom(f) space (m < f(x) < M)$, entonces:
+$ m(b-a) <= limits("sup")_P space L(f, P) = integral_a^b f = limits("inf")_P space U(f, P) <= M(b-a) $
+
+#todo[Demostración]
+
+== Corolario
+Sean $f$ y $g$ funciones integrables en $[a, b]$ donde $forall x in [a, b] space (f(x) <= g(x))$ entonces:
+$ integral_a^b f <= integral_a^b g $
+
+#todo[Demostración]
+
+== Integral del valor absoluto de una función
+Sea $f$ integrable en $[a, b]$ entonces $abs(f)$ es integrable en $[a,b]$ y se da:
+$ abs(integral_a^b f) <= integral_a^b abs(f) $
+
+#todo[Demostración]
+
+= Cálculo de Áreas
+== Cuando la función es no positiva
+Dada una función $f$ integrable en $[a, b]$ entonces si $forall x in [a, b] space f(x) <= 0$ entonces el área entre la gráfica de $f$ y el eje $x$ es $-integral_a^b f$.
+
+== Entre dos funciones no negativas
+Dadas las funciones $f$ y $g$ integrable en $[a, b]$ tal que $forall x in [a, b] space f(x) <= g(x)$ y el lugar geométrico del plano $R = {P(x, y): x in [a, b] and y in [f(x), g(x)]}$ entonces el área de $R$ es:
+$ "es" $
+$ "Área"(R) = integral_a^b (g(x) - f(x)) $
+
+== En general
+Dada una función $f$ integrable en $[a, b]$ entonces el área entre la gráfica de $f$ y el eje $x$ es $integral_a^b abs(f)$.
+
+= Valor medio
+Dada $f$ continua en $[a, b]$ entonces existen $xi in [a, b]$ y $mu = f(xi)$ tal que:
+$ f(xi) = mu = 1/(b-a) integral_a^b f $
+
+#todo[Demostración: Usa Weierstrass]
+
