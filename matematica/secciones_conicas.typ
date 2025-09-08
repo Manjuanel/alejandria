@@ -104,14 +104,14 @@ Los puntos que pertenecen a una hipérbola que también pertenecen al eje focal 
 
 == Caso horizontal
 Si la ordenada de ambos focos es la misma entonces también la comparten con el centro y los focos quedan definidos por $F_1(x_0 - c + a, y_0)$ y $F_2(x_0 + c - a, y_0)$ pues queda uno a la izquierda del centro y otro a la derecha. Trabajando algebraicamente la ley que define a la elipse y definiendo $b = sqrt(c^2 - a^2)$ entonces la elipse es:
-$ P(x, y) in Epsilon(F_1, F_2, a) <=> (x - x_0)^2/a^2 - (y - y_0)^2/b^2 = 1 $
+$ P(x, y) in H(F_1, F_2, a) <=> (x - x_0)^2/a^2 - (y - y_0)^2/b^2 = 1 $
 
 === Asíntotas
 La rectas que contienen al centro $C(x_0, y_0)$ y a cualquier $P(x_0 #text(red)[$plus.minus$] a, y_0 #text(blue)[$plus.minus$] b)$ son las asíntotas de la hipérbola, son dos.
 
 == Caso vertical
 Si la abscisa de ambos focos es la misma entonces con un razonamiento similar al anterior queda.
-$ P(x, y) in Epsilon(F_1, F_2, a) <=> (y - y_0)^2/a^2  - (x - x_0)^2/b^2 = 1 $
+$ P(x, y) in H(F_1, F_2, a) <=> (y - y_0)^2/a^2  - (x - x_0)^2/b^2 = 1 $
 
 === Asíntotas
 La rectas que contienen al centro $C(x_0, y_0)$ y a cualquier $P(x_0 #text(red)[$plus.minus$] b, y_0 #text(blue)[$plus.minus$] a)$ son las asíntotas de la hipérbola, son dos.
@@ -119,3 +119,77 @@ La rectas que contienen al centro $C(x_0, y_0)$ y a cualquier $P(x_0 #text(red)[
 === Caso degenerado
 La siguiente ecuación describe un lugar geométrico del plano igual a la union de dos rectas secantes.
 $ (x - x_0)^2/a^2 - (y-y_0)^2/b^2 = 0 $
+
+== Ecuaciones paramétricas de la hipérbola
+Recordamos: $cosh^2 t - sinh^2 t = 1$
+
+=== Caso horizontal
+Dada $H$ la hipérbola descripta por:
+$ (x - x_0)^2/a^2 - (y - y_0)^2/b^2 = 1 $
+Sean $H^+ = { P(x, y) in H: x > x_0 }$ y $H^- = { P(x, y) in H: x < x_0 }$.
+
+Entonces las ecuaciones paramétricas de $H^+$ son:
+$ cases(x = x_0 + a cosh(t), y = y_0 + b sinh(t)) $
+
+Entonces las ecuaciones paramétricas de $H^-$ son:
+$ cases(x = x_0 + a cosh(t), y = y_0 - b sinh(t)) $
+
+#todo[Chequear que las paramétricas sean correctas]
+
+=== Área de una hipérbola
+#todo[Gráfico (explica la motivación para llamar a $sinh, cosh$ como se nombran]
+
+= Parábola
+Dada una recta $r$ llamada *directriz* y un punto $F$ del plano llamado *foco* tal que $F in.not r$ se llama *parábola* al lugar geométrico del plano $U$ descripto por el conjunto de todos los puntos que equidistan al foco y a la recta.
+$ P in U(r, F) <=> d(P, F) = d(P, r) $
+
+== Caso con recta horizontal
+Si dado $a in RR$ se define a la directriz mediante la ecuación $y = a$ y se tiene al foco $F(x_0, y')$
+
+=== Caso 'hacia arriba'
+Cuando $y' > a$ se definen:
+- $p = d(F, r)$
+- $Q(x_0, a) in r$
+- $V(x_0, y_0)$ con $y_0 = y'-p/2$ es el vértice de la parábola.
+
+Entonces la distancia de un punto $P(x, y)$ de la parábola al foco es:
+$ d(P, F) &= sqrt((x - x_0)^2 + (y - y')^2) \
+          &= sqrt((x - x_0)^2 + (y - y_0 - p/2)^2) $
+
+Y la distancia de un punto $P(x, y)$ de la parábola a la directriz es:
+$ d(P, r) = y - a  = y - y_0 + p/2 $
+
+Entonces:
+$ d(P, F) &= d(P, r) \
+  sqrt((x - x_0)^2 + (y - y_0 - p/2)^2) &= y - y_0 + p/2 \
+  (x - x_0)^2 + (y - y_0 - p/2)^2 &= (y - y_0 + p/2)^2 \
+  (x - x_0)^2 + (y - y_0)^2 - 2(y - y_0)p/2 + p^2/4 &= (y - y_0)^2 + 2(y - y_0)p/2 + p^2/4 \
+  (x - x_0)^2  &= 2 p(y - y_0) $
+
+$ therefore P(x, y) in U(r, F) <=> (x - x_0)^2  = 2 p(y - y_0) $
+
+=== Caso 'hacia abajo'
+Cuando $y' < a$ se definen:
+- $p = d(F, r)$
+- $Q(x_0, a) in r$
+- $V(x_0, y_0)$ con $y_0 = y'+p/2$ es el vértice de la parábola.
+
+$ P(x, y) in U(r, F) <=> (x - x_0)^2  = -2 p(y - y_0) $
+
+== Caso horizontal
+=== Caso 'hacia la derecha'
+$ P(x, y) in U(r, F) <=> (y - y_0)^2  = 2 p(x - x_0) $
+#todo[Chequear y completar]
+=== Caso 'hacia la izquierda'
+$ P(x, y) in U(r, F) <=> (y - y_0)^2  = -2 p(x - x_0) $
+#todo[Chequear y completar]
+
+== Ecuaciones paramétricas de la parábola
+=== Caso vertical "hacia arriba"
+Sea $U$ una parábola, entonces:
+$ P(x, y) in U <=> cases(x = x_0 + t, y = y_0 + 1/(2 p) t^2) space, t in RR $
+
+#todo[Etc...]
+
+= Cónicas degeneradas
+#todo[Hay bastantes casos]

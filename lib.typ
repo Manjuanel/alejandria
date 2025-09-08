@@ -59,7 +59,6 @@
 #let Codom = "Codom"
 #let Im = "Im"
 #let Rec = "Rec"
-#let sin = "sen"
 #let Xor = $#h(0.2375em)"\u{22BB}"#h(0.2375em)$
 #let limit = $limits("lim")$
 
