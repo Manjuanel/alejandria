@@ -193,3 +193,12 @@ $ P(x, y) in U <=> cases(x = x_0 + t, y = y_0 + 1/(2 p) t^2) space, t in RR $
 
 = Cónicas degeneradas
 #todo[Hay bastantes casos]
+
+= 'So far'
+Hasta ahora podemos interpretar cualquier ecuación general de segundo grado en las variables $x$ e $y$ sin termino rectangular, e.g:
+$ A x^2 + B y ^ 2 + C x + D y + E = 0 $
+$ A (x - x_0)^2 + B (y - y_0)^2 = Q $
+Donde $A, B, C, D, E in RR$ donde $abs(A) + abs(B) > 0$ (Si no sería una recta).
+
+== Casos
+#todo[Todos los casos incluidos los degenerados]
