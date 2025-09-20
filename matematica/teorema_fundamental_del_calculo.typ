@@ -44,7 +44,7 @@ $ f(x) = integral_a^g(x) h(x) = (F compose g)(x) \
 = Funciones exponenciales y logarítmicas
 == Función logaritmo
 Se define al logaritmo natural como la función:
-#align(center)[#function_def($ln$, $RR^+$, $RR$, $x$, $ln(x) = integral_1^x 1/t d t $)]
+#align(center)[#function_def($ln$, $RR^+$, $RR$, $x$, $ln(x) = integral_1^x 1/t dif t $)]
 
 Se cumplen todas las propiedades habituales del logaritmo.
 
@@ -73,3 +73,41 @@ La exponencial en base $a$ es la función:
 Entonces $exp(x) = exp(ln(e)x) = e^x$
 
 Se define también la exponencial en base $1$ como $1^x = 1$
+
+= Búsqueda de primitivas
+== Forma general de las primitivas
+Dada una función $f$ integrable y $F$ una primitiva de $f$ a la familia de todas sus primitivas se le simboliza:
+$ integral f = F(x) + c space, c in RR $
+
+== #todo[titulo]
+Dada una función $f$ integrable una primitiva $F$ se simboliza:
+$ F(x) = integral^x f $
+ya que el extremo inferior es irrelevante al hacer diferir a la primitiva de otras primitivas por una constante.
+
+== Función error de Gauss y seno integral
+#todo[]
+
+== Primitivas directas
+#todo[]
+
+== Método de sustitución
+Sea $g$ función derivable, $g'$ continua en $[a, b]$ y $f$ continua en $Im(g)$ entonces
+$ integral_g(a)^g(b) f = integral_a^b (f compose g) g' $
+
+#todo[dem]
+$ integral_g(a)^g(b) f &= integral_g(a)^g(b) F'
+                       &= F'|_g(a)^g(b)
+                       &= F(g(b)) - F(g(a)) \
+                       &= (F compose g)(b) - (F compose g)(a) \
+                       &= integral_a^b (F compose g)' \
+                       &= integral_a^b (F' compose g) g' \
+                       &= integral_a^b (f compose g) g' \
+$
+
+
+== Método de integración por partes
+Dadas dos funciones derivables $f$ y $g$ con $f'$ y $g'$ continuas en un intervalo abierto que contiene a $[a, b]$ entonces:
+$ integral_a^b f g'  = integral_a^b (f g)' - integral_a^b f' g = (f g)|_a^b - integral_a^b f' g $
+
+Tomando $u = f(x)$ y $v = g(x)$ queda:
+$ integral u dif v = u v - integral v dif u $

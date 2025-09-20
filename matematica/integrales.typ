@@ -45,7 +45,7 @@ $ underline(integral)_a^b f = limits("sup")_P space L(f, P) <= limits("inf")_Q s
 
 == Integral de Riemann
 Dada la función $f:[a, b] -> RR$ acotada en $[a, b]$ es integrable según Riemann si la integral inferior es igual a la integral superior que son entonces iguales a la integral de f. Se nota:
-$ integral_a^b f = overline(integral)_a^b f = underline(integral)_a^b f = integral_a^b f(x) d x $
+$ integral_a^b f = overline(integral)_a^b f = underline(integral)_a^b f = integral_a^b f(x) dif x $
 
 == Area bajo una curva
 Dada la función $f:[a, b] -> RR$ acotada y no negativa en $[a, b]$, sea la región:
