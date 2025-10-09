@@ -1,7 +1,11 @@
 #import "../lib.typ" : *
 #show: init.with(debug: true)
 
-#title[Geometria Analitica en el Espacio]
+#let subtitle(text) = {
+  title(size: 18pt, text)
+}
+
+#title[Geometría Analítica en el Espacio]
 //#let escalar = math.dot.op
 #let escalar = math.times
 //#let vectorial = math.times
@@ -104,6 +108,9 @@ Que la intersección entre dos planos sea una recta ocurre si y solo si sus vect
 == Distancia de un punto a un plano
 Dado un punto $P$ y un plano $pi) a x + b y + c z + d = 0 $ con un vector normal $arrow(n)$ que contiene al punto $P_0(x_0, y_0, z_0)$ entonces la distancia
 
+Se cumple:
+$ d(P(x_0, y_0, z_0), pi) = abs(a x_0 + b y_0 + c z_0 + d)/sqrt(a^2 + b^2 + c^2) $
+
 #todo[Es bastante análogo a las rectas]
 
 == Forma simétrica de la ecuación de una recta
@@ -122,4 +129,229 @@ donde $pi_1$ es el plano proyectante de $r$ sobre el plano $X Y$ y $pi_2$ es el 
 == Posiciones relativas
 #todo[]
 
-==
+== Ecuaciones de los planos proyectantes
+$ pi_(X Y))u_1^(-1) x - u_2^(-1) y + (- y_0 u_2^(-1) - x_0 u_1^(-1)) = 0 $
+$ pi_(Y Z))u_2^(-1) y - u_3^(-1) z + (- z_0 u_3^(-1) - y_0 u_2^(-1)) = 0 $
+$ pi_(Z X))u_1^(-1) z - u_1^(-1) x + (- x_0 u_1^(-1) - z_0 u_3^(-1)) = 0 $
+
+#subtitle[Superficies cuádricas]
+A partir de ahora analizaremos las ecuaciones de la forma:
+$ A x^2 + B y^2 + C z^2 + D x + E y + F z + G = 0 $
+#todo[Expandir en la eq. gral.]
+
+=== Esferas, elipsoides e hiperboloides
+Si la ecuación tiene la forma:
+$ plus.minus (x - x_0)^2/a^2 plus.minus (y - y_0)^2/b^2 plus.minus (z - z_0)^2/c^2 = 1 $
+
+=== Conos
+Si la ecuación tiene la forma:
+$ plus.minus (x - x_0)^2/a^2 plus.minus (y - y_0)^2/b^2 plus.minus (z - z_0)^2/c^2 = 0 $
+
+=== Paraboloides
+Si la ecuación tiene la forma:
+$ plus.minus (x - x_0)^2/a^2 plus.minus (y - y_0)^2/b^2 plus.minus (z - z_0)/c = 0 $
+
+=== Cilindro generalizado
+#todo[]
+
+= Elipsoide
+Dada la ecuación de la forma:
+$ (x - x_0)^2/a^2 + (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1 $
+
+Si a = b = c entonces el lugar es una esfera, de centro $P_0(x_0, y_0, z_0)$ y radio $r = a$.
+
+Si no entonces el lugar es un *elipsoide* con centro (y eje de simetría) $C(x_0, y_0, z_0)$
+
+== Trazas
+Con el plano $z = z_0$, queda:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, z = z_0) <=> cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = 1, z = z_0) $
+
+Entonces la traza es una elipse contenida por el plano $z = z_0$
+
+Con el plano $x = x_0$, queda:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, x = x_0) <=> cases((y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, x = x_0) $
+
+Entonces la traza es una elipse contenida por el plano $x = x_0$
+
+Con con el plano $y = y_0$, queda:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, y = y_0) <=> cases((x - x_0)^2/a^2 + (z - z_0)^2/c^2 = 1, y = y_0) $
+
+Entonces la traza es una elipse contenida por el plano $y = y_0$
+
+Con planos del tipo $x = k$, queda:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, x = k) <=> cases((y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1 - (k - x_0)^2/a^2, x = x_0) $
+
+Donde si $1 - (k - x_0)^2/a^2 < 0$ la intersección es vacía, si $1 - (k - x_0)^2/a^2 > 0$ Entonces la intersección es una elipse contenida en el plano $x = k$ y si $1 - (k - x_0)^2/a^2 = 0$ la intersección es un punto $P(x_0 plus.minus a, y_0, z_0)$
+
+= Hiperboloides de una hoja
+Las ecuaciones de la forma:
+$ (x - x_0)^2/a^2 + (y - y_0)^2/b^2 - (z - z_0)^2/c^2 = 1 $
+
+Describen hiperboloides.
+
+== Trazas
+La intersección entre un hiperboloide y el plano $x = x_0$ es:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 - (z - z_0)^2/c^2 = 1, x = x_0) <=> cases((y - y_0)^2/b^2 - (z - z_0)^2/c^2 = 1, x = x_0) $
+Osea es una hipérbola sobre el plano $x = x_0$
+
+La intersección entre un hiperboloide y el plano $y = y_0$ es:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 - (z - z_0)^2/c^2 = 1, y = y_0) <=> cases((x - x_0)^2/b^2 - (z - z_0)^2/c^2 = 1, y = y_0) $
+Osea es una hipérbola sobre el plano $y = y_0$
+
+La intersección entre un hiperboloide y el plano $z = z_0$ es:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 - (z - z_0)^2/c^2 = 1, z = z_0) <=> cases((x - x_0)^2/b^2 + (y - y_0)^2/c^2 = 1, z = z_0) $
+Osea es una elipse sobre el plano $z = z_0$
+
+La intersección entre un hiperboloide y un plano $x = k$ es:
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 - (z - z_0)^2/c^2 = 1, x = x_0) <=> cases((y - y_0)^2/b^2 - (z - z_0)^2/c^2 = 1 - (k - x_0)^2/a^2, x = x_0) $
+Si $1 - (k - x_0)^2/a^2 > 1$ entonces es una hipérbola con eje focal paralelo al eje $Z$.
+Si $1 - (k - x_0)^2/a^2 < 1$ entonces es una hipérbola con eje focal paralelo al eje $Y$.
+Si $1 - (k - x_0)^2/a^2 = 1$ entonces es una hipérbola con eje focal paralelo al eje $Z$.
+
+#todo[Revisar y corregir]
+
+= Hiperboloides de dos hojas
+Las ecuaciones de la forma:
+$  - (x - x_0)^2/a^2 - (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1 $
+
+Describen un hiperboloide de dos hojas.
+
+== Trazas
+La intersección entre un hiperboloide y el plano $x = x_0$ es:
+$ cases(- (x - x_0)^2/a^2 - (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, x = x_0) <=> cases(- (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, x = x_0) $
+Osea es una hipérbola sobre el plano $x = x_0$
+
+La intersección entre un hiperboloide y el plano $y = y_0$ es:
+$ cases(- (x - x_0)^2/a^2 - (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, y = y_0) <=> cases(- (x - x_0)^2/b^2 + (z - z_0)^2/c^2 = 1, y = y_0) $
+Osea es una hipérbola sobre el plano $y = y_0$
+
+La intersección entre un hiperboloide y el plano $z = z_0$ es:
+$ cases(- (x - x_0)^2/a^2 - (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, z = z_0) <=> cases(- (x - x_0)^2/b^2 - (y - y_0)^2/c^2 = 1, z = z_0) $
+
+Osea es el vacío.
+
+La intersección entre un hiperboloide y un plano de la forma $z = k$ es:
+$ cases(- (x - x_0)^2/a^2 - (y - y_0)^2/b^2 + (z - z_0)^2/c^2 = 1, z = z_0) <=> cases((x - x_0)^2/b^2 + (y - y_0)^2/c^2 = (k - z_0)^2/c^2 - 1, z = z_0) $
+
+Si $(k - z_0)^2/c^2 - 1 > 0$ es una elipse o circunferencia.
+
+Si $(k - z_0)^2/c^2 - 1 < 0$ es el vacío.
+
+Si $(k - z_0)^2/c^2 - 1 = 0$ es un punto de la forma $P(x_0, y_0, z_0 plus.minus c)$
+
+= Cono
+Las ecuaciones de la forma:
+$ (x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)^2/c^2 $
+
+Si $a = b$ describen un cono. Si $a != b$ describen un cono elíptico.
+
+== Trazas
+La intersección con el plano $z = z_0$ es
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)^2/c^2, z = z_0) <=> cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = 0, z = z_0) <=> cases(x = x_0, y = y_0, z = z_0) $
+
+Osea es el punto $P(x_0, y_0, z_0)$
+
+La intersección con el plano $y = y_0$ es
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)^2/c^2, y = y_0) <=> cases((x - x_0)^2/a^2 = (z - z_0)^2/c^2, y = y_0) <=> cases(abs(x - x_0) = a/c abs(z - z_0), y = y_0) $
+
+Osea son dos rectas secantes en $P(x_0, y_0, z_0)$
+
+La intersección con el plano $x = x_0$ es
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)^2/c^2, x = x_0) <=> cases((y - y_0)^2/b^2 = (z - z_0)^2/c^2, x = x_0) <=> cases(abs(y - y_0) = b/c abs(z - z_0), x = x_0) $
+
+Osea son dos rectas secantes en $P(x_0, y_0, z_0)$
+
+La intersección con un plano $z = k$ es
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)^2/c^2, z = k) <=> cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (k - z_0)^2/c^2, z = k) $
+
+Osea es una elipse en el plano $z = k$.
+
+La intersección con un plano $y = k$ es
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)^2/c^2, y = k) <=> cases((z - z_0)^2/c^2 - (x - x_0)^2/a^2 = (k - y_0)^2/b^2, y = k) $
+
+Osea es una hipérbola en el plano $y = k$.
+
+= Paraboloide elíptico
+Las ecuaciones de la forma:
+$ (x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)/c $
+
+Describen un paraboloide elíptico con *vértice* $V(x_0, y_0, z_0)$
+
+== Trazas
+La intersección con el plano $z = z_0$
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)/c, z = z_0) <=> cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = 0, z = z_0) <=> cases(x = x_0, y = y_0, z = z_0) <=> $
+
+Osea el vértice.
+
+La intersección con el plano $y = y_0$
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)/c, y = y_0) <=> cases((x - x_0)^2 = a^2/c (z - z_0), y = y_0) $
+
+Osea es una parábola en el plano $y = y_0$
+
+La intersección con el plano $x = x_0$
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)/c, x = x_0) <=> cases((y - y_0)^2 = b^2/c (z - z_0), x = x_0) $
+
+Osea es una parábola en el plano $x = x_0$
+
+La intersección con un plano $z = k$
+$ cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (z - z_0)/c, z = k) <=> cases((x - x_0)^2/a^2 + (y - y_0)^2/b^2 = (k - z_0)/c, z = k) $
+
+Para $c > 0$ con $k > z_0$ es una elipse en el plano $z = k$ y para $k < z_0$ es el vacío.
+
+= Paraboloide hiperbólico
+Las ecuaciones de la forma:
+$ (x - x_0)^2/a^2 - (y - y_0)^2/b^2 = (z - z_0)/c $
+
+== Trazas
+La intersección con el plano $y = y_0$
+$ cases((x - x_0)^2/a^2 - (y - y_0)^2/b^2 = (z - z_0)/c, y = y_0) <=> cases((x - x_0)^2 = a^2/c (z - z_0), y = y_0) $
+
+Osea es una parábola en el plano $y = y_0$
+
+La intersección con el plano $x = x_0$
+$ cases((x - x_0)^2/a^2 - (y - y_0)^2/b^2 = (z - z_0)/c, x = x_0) <=> cases((y - y_0)^2 = -b^2/c (z - z_0), x = x_0) $
+
+Osea es una parábola en el plano $x = x_0$
+
+La intersección con un plano $z = k$
+$ cases((x - x_0)^2/a^2 - (y - y_0)^2/b^2 = (z - z_0)/c, z = k) <=> cases((x - x_0)^2/a^2 - (y - y_0)^2/b^2 = (k - z_0)/c, z = k) $
+
+Para $k != z_0$ es una hipérbola en el plano $z = k$ y para $k = z_0$ es dos rectas secantes.
+
+La intersección con un plano $x = k$
+$ cases((x - x_0)^2/a^2 - (y - y_0)^2/b^2 = (z - z_0)/c, x = k) <=> cases((y - y_0)^2/b^2 = -(z - z_0)/c + (k - x_0)^2/a^2 , x = k) $
+
+Para cualquier $x$ es una parábola.
+
+= Cilindros y otros...
+Si en la ecuación
+$ A x^2 + B y^2 + C z^2 + D x + E y + F z + G = 0 $
+tiene $C = 0 and F = 0$ entonces la superficie es la proyección de la sección cónica del plano $X Y$ en la dirección del eje $Z$.
+
+#subtitle[Curvas en el espacio]
+Estudiaremos las curvas en el espacio que surgen de intersecar dos superficies cuádricas (planos incluidos). Así dadas dos superficies cuádricas $F_1$, $F_2$ se define la curva $gamma$ de la intersección entre ambas mediante:
+$ P(x, y, z) in gamma <=> cases(F_1(x, y, z) = 0, F_2(x, y, z) = 0) $
+Y $gamma$ tiene ecuaciones paramétricas:
+$ gamma) cases(x = x(t), y = y(t), z = z(t)) space, t in I $
+Donde $I subset.eq RR$ es un intervalo
+
+Una estrategia para encontrar las ecuaciones paramétricas consiste en hallar la trazas de la curva en alguno de los planos coordenados, obtener las ecuaciones paramétricas de la traza y parametrizar la coordenada restante.
+
+Es importante al pasar de ecuaciones paramétricas de una curva a unas no paramétricas no eliminar condiciones implícitas de la curva convirtiéndola en otra figura.
+
+#subtitle[Superficies parametrizadas]
+Define la superficie $sigma$ se parametriza por:
+$ sigma) cases(x = x(t), y = y(t, u), z = z(t, u)) space, t in I_1, u in I_2 $
+Donde $I_1, I_2 subset.eq RR$ son intervalos.
+#todo[Chequear]
+
+#todo[Expandir para curvas que no son intersecciones de sups]
+
+= Superficies de revolución
+Dada la ecuación paramétrica de una circunferencia contenida en un plano $z = z_0$ de radio $abs(x_0)$ ($x_0, z_0 in RR$).
+$ cases(x = x_0 cos(theta), y = x_0 sin(theta), z = z_0) space, theta in [0, 2pi) $
+
+Si permitimos variar a $z$ por una función $beta$ y al radio como función $alpha$ del mismo parámetro queda definida una superficie de revolución con eje de rotación el eje $Y$ de ecuaciones:
+$ s)cases(x = alpha(t) cos(theta), y = alpha(t) sin(theta), z = beta(t)) space, t in I, theta in [0, 2pi) $
+Donde la curva que es rotada perteneciente al plano $X Z$ se describe por:
+$ gamma)cases(x = alpha(t), y = 0, z = beta(t)) space, t in I $

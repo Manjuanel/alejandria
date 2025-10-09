@@ -103,7 +103,7 @@ A la recta que contiene a los focos se le llama *eje focal*.
 Los puntos que pertenecen a una hipérbola que también pertenecen al eje focal se llaman vértices.
 
 == Caso horizontal
-Si la ordenada de ambos focos es la misma entonces también la comparten con el centro y los focos quedan definidos por $F_1(x_0 - c + a, y_0)$ y $F_2(x_0 + c - a, y_0)$ pues queda uno a la izquierda del centro y otro a la derecha. Trabajando algebraicamente la ley que define a la elipse y definiendo $b = sqrt(c^2 - a^2)$ entonces la elipse es:
+Si la ordenada de ambos focos es la misma entonces también la comparten con el centro y los focos quedan definidos por $F_1(x_0 - c, y_0)$ y $F_2(x_0 + c, y_0)$ pues queda uno a la izquierda del centro y otro a la derecha. Trabajando algebraicamente la ley que define a la elipse y definiendo $b = sqrt(c^2 - a^2)$ entonces la elipse es:
 $ P(x, y) in H(F_1, F_2, a) <=> (x - x_0)^2/a^2 - (y - y_0)^2/b^2 = 1 $
 
 === Asíntotas
@@ -132,9 +132,18 @@ Entonces las ecuaciones paramétricas de $H^+$ son:
 $ cases(x = x_0 + a cosh(t), y = y_0 + b sinh(t)) $
 
 Entonces las ecuaciones paramétricas de $H^-$ son:
-$ cases(x = x_0 + a cosh(t), y = y_0 - b sinh(t)) $
+$ cases(x = x_0 - a cosh(t), y = y_0 + b sinh(t)) $
 
-#todo[Chequear que las paramétricas sean correctas]
+=== Caso vertical
+Dada $H$ la hipérbola descripta por:
+$ (y - y_0)^2/a^2 - (x - x_0)^2/b^2 = 1 $
+Sean $H^+ = { P(x, y) in H: y > y_0 }$ y $H^- = { P(x, y) in H: y < y_0 }$.
+
+Entonces las ecuaciones paramétricas de $H^+$ son:
+$ cases(x = x_0 + b sinh(t), y = y_0 + a cosh(t)) $
+
+Entonces las ecuaciones paramétricas de $H^-$ son:
+$ cases(x = x_0 + b sinh(t), y = y_0 - a cosh(t)) $
 
 === Área de una hipérbola
 #todo[Gráfico (explica la motivación para llamar a $sinh, cosh$ como se nombran]
