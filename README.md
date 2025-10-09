@@ -1,5 +1,5 @@
 # Bienvenido a alejandria
-Alejandria es un repositorio de apuntes hackeables. Esto significa que aunque contiene los documentos compilados en formato `pdf` realmente está pensado para que cada uno se descarga los archivos y compile el apunte que requiere configurándolo a su preferencia. La idea es usar una misma librería como plantilla pero que la misma tenga una API sencilla de re-implementar para poder tener un apunte realmente personalizado. Están todos invitados a contribuir sus propios apuntes siempre que sigan las normas (escritas y si no de sentido común).
+Alejandria es un repositorio de apuntes _hackeables_. Esto significa que aunque contiene los documentos compilados en formato `pdf` realmente está pensado para que cada uno se descarga los archivos y compile el apunte que requiere configurándolo a su preferencia. La idea es usar una misma librería como plantilla pero que la misma tenga una API sencilla de re-implementar para poder tener un apunte realmente personalizado. Están todos invitados a contribuir sus propios apuntes siempre que sigan las normas (escritas y si no de sentido común).
 
 ## Requisitos
 Tener una instalación funcional de `typst`.
@@ -20,8 +20,4 @@ typst compile --root .. complejos.typ ../pdfs/complejos.pdf
 Luego con el visor de preferencia del lector abre el archivo generado.
 
 ## Reglamentos
-Para que los apuntes mantengan una estética mínimamente coherente dejo dos documentos que intentan ser de ayuda al escribir un documento en caso de querer contribuir.
-
-El primero es `notacion.typ` dedicado a establecer la notación (principalmente para apuntes de matemática) recomendado en los documentos donde se explayen materias con multiples posibles notaciones de las cuales elegir.
-
-El segundo es `estilo_y_normas.typ` que dará reglas generales para que los estilos de los apuntes se mantengan estables. Este segundo archivo no contendrá demasiadas instrucciones al respecto del resultado gráfico deseado de un apunte ya que una parte principal del proyecto es que eso sea modificable a disposición del usuario, en cambio se apunta a una guía estructural que ayude a usar los elementos y herramientas de la librería.
+Para que los apuntes mantengan una estética mínimamente coherente dejo un documento llamado `estilo_y_normas.typ` que dará reglas generales para que los estilos de los apuntes se mantengan estables. Se apunta a una guía estructural que ayude a usar los elementos y herramientas de la librería.
