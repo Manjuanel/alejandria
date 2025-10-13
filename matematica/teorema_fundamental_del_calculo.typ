@@ -7,7 +7,7 @@
 
 = Funciones integrales
 Sea la función $f$ integrable en $[a, b]$ entonces $forall x in [a, b] space (f "es integrable en" [a, x])$. Se define la función:
-#align(center)[#function_def($F$, $[a, b]$, $RR$, $x$, $F(x) = integral_a^x f$)]
+$ function(F, [a, b], RR, x, F(x) = inline(integral_a^x f)) $
 
 A $F$ es una función integral.
 
@@ -46,7 +46,7 @@ $ f(x) = integral_a^g(x) h(x) = (F compose g)(x) \
 = Funciones exponenciales y logarítmicas
 == Función logaritmo
 Se define al logaritmo natural como la función:
-#align(center)[#function_def($ln$, $RR^+$, $RR$, $x$, $ln(x) = integral_1^x 1/t dif t $)]
+$ function(ln, RR^+, RR, x, ln(x) = integral_1^x 1/t dif t) $
 
 Se cumplen todas las propiedades habituales del logaritmo.
 
@@ -56,7 +56,7 @@ Se define $e$ como el real tal que $ln(e) = 1$.
 
 == Función exponencial
 Se define la función exponencial $f$ como:
-#align(center)[#function_def($exp$, $RR$, $RR^+$, $x$, $exp(x)$)]
+$ function(exp, RR, RR^+, x, exp(x)) $
 Tal que:
 $ exp(x) = y <=> x = ln(y) $
 
@@ -66,11 +66,11 @@ Se cumplen todas las propiedades habituales de la exponencial.
 == Funciones logaritmos y exponenciales generales.
 === Logaritmo en base $a$
 El logaritmo en base $a$ es la función:
-#align(center)[#function_def($log_a$, $RR^+$, $RR$, $x$, $log_a (x) = ln(x)/ln(a)$)]
+$ function(log_a, RR^+, RR, x, log_a (x) = ln(x)/ln(a)) $
 
 === Exponencial en base $a$
 La exponencial en base $a$ es la función:
-#align(center)[#function_def($f$, $RR$, $RR^+$, $x$, $f(x) = exp(ln(a)x) = a^x $)]
+$ function(f, RR, RR^+, x, f(x) = exp(ln(a)x) = a^x) $
 
 Entonces $exp(x) = exp(ln(e)x) = e^x$
 

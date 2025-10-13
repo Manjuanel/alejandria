@@ -96,15 +96,12 @@
     )
 }
 
-#let function_def(name, dom, codom, var, law) = {
-    box(
-        table(
-                stroke: none,
-                inset: (rest: 0.1em),
-                align: left + horizon,
-                columns: (auto, auto, auto, auto)
-        )[#name:][#dom][$->$][#codom][][#var][$|->$][#law]
-    )
+#let function(name, dom, codom, var, law) = {
+    // TODO: Remove unnecessary extra white space.
+    $
+        name: dom &-> codom \
+              var &|-> law
+    $
 }
 
 #let init(debug: false, font_size: 12pt, doc) = {
@@ -135,20 +132,7 @@
     set heading(numbering: heading_numbering)
     set enum(numbering: "1.i.")
 
-    if false { // Considering removal
-        show math.in.not: it => {
-            h(0.05em)
-            math.in.not
-            h(0.05em)
-        }
-        show math.in: it => {
-            h(0.05em)
-            it
-            h(0.05em)
-        }
-    }
     show math.Re: "Re"
-    show math.Im: "Im"
 
     show: indent_block
     doc

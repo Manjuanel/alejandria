@@ -7,7 +7,7 @@
 
 = Polinomio a coeficientes complejos
 Sea $n in NN_0 and forall i in NN_0 inter [0, n] space a_i in CC and a_n != 0$ entonces Una función polinómica o polinomio a coeficientes complejos es una función de la forma:
-#align(center)[#function_def($p$, $CC$, $CC$, $x$, $p(x) = display(sum_(i=0)^n a_i x^i) = a_n x^n + a_(n-1) x^(n-1) + ... + a_1 x + a_0$)]
+$ function(p, CC, CC, x, p(x) = display(sum_(i=0)^n a_i x^i) = a_n x^n + a_(n-1) x^(n-1) + ... + a_1 x + a_0) $
 
 - $a_k$ es el $k$-ésimo coeficiente.
 - $a_k x^k$ es el $k$-ésimo término o monomio.
@@ -28,19 +28,19 @@ Sean $p, q in CC[x]$ y $p(x) = display(sum_(i=0)^n a_i x^i), q(x) = display(sum_
 
 == Suma
 La suma de $p$ y $q$ es el polinomio suma definido por:
-#align(center)[#function_def($(p+q)$, $CC$, $CC$, $x$, $(p+q)(x) = p(x) + q(x)$)]
+$ function((p+q), CC, CC, x, (p+q)(x) = p(x) + q(x)) $
 
 == Opuesto
 El opuesto de $p$ de define por:
-#align(center)[#function_def($-p$, $CC$, $CC$, $x$, $(-p)(x) = -p(x)$)]
+$ function(-p, CC, CC, x, (-p)(x) = -p(x)) $
 
 == Diferencia
 La diferencia de $p$ y $q$ es el polinomio definido por:
-#align(center)[#function_def($(p-q)$, $CC$, $CC$, $x$, $(p-q)(x) = (p+(-q))(x) = p(x) - q(x)$)]
+$ function((p-q), CC, CC, x, (p-q)(x) = (p+(-q))(x) = p(x) - q(x)) $
 
 == Multiplicación
 La multiplicación de $p$ y $q$ es el polinomio definido por:
-#align(center)[#function_def($(p dot q)$, $CC$, $CC$, $x$, $(p dot q)(x) = p(x) q(x) = (display(sum_(i=0)^n a_i x^i)) (display(sum_(j=0)^m b_j x^j)) = display(sum_(i=0)^n sum_(j=0)^m a_i b_j x^(i+j)) = display(sum_(k=0)^(n+m) c_k x^k)$)]
+$ function((p dot q), CC, CC, x, (p dot q)(x) = p(x) q(x) = (display(sum_(i=0)^n a_i x^i)) (display(sum_(j=0)^m b_j x^j)) = display(sum_(i=0)^n sum_(j=0)^m a_i b_j x^(i+j)) = display(sum_(k=0)^(n+m) c_k x^k)) $
 
 == Inverso
 Se dice que $q$ es el inverso de $p$ si $p dot q = overline(1)$. Esto se da si:

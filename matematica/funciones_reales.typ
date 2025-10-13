@@ -56,7 +56,7 @@ Sea $f$ una función, $A subset.eq Dom(f)$ y $x_1, x_2 in A$:
 #todo[]
 == Función constante
 Sea $c in RR$ se define a la función constante $f$ como:
-#align(center)[#function_def($f$, $RR$, $RR$, $x$, $f(x) = c$)]
+$ function(f, RR, RR, x, f(x) = c) $
 #todo[Gráfica]
 
 == #todo[Las otras funciones elementales]

@@ -22,14 +22,12 @@ Si $A$ y $B$ son conjuntos finitos y disjuntos entonces $abs(A union B) = abs(A)
 Sean $n, m in NN$ con $n = abs(A)$ y $m = abs(B)$ entonces por hipótesis existen las funciones biyectivas\ $f: [|1, n|] -> A$ y $g: [|1, m|] -> B$.
 Luego defino una función:
 
-$
-h: [|1, abs(A) + abs(B)|] &-> A union B \
-n &|-> f(n) =
-cases(
- f(n)          &","quad n in [|1, abs(A)|],
- g(n - abs(A)) &","quad n in [|abs(A) + 1, abs(A) + abs(B)|]
-)
-$
+$ function(h, [|1, abs(A) + abs(B)|], A union B, n, f(n) =
+    cases(
+        f(n)          ","quad &n in [|1, abs(A)|],
+        g(n - abs(A)) ","quad &n in [|abs(A) + 1, abs(A) + abs(B)|]
+    )
+) $
 
 Y demostrando que es biyectiva queda que $abs(A union B) = abs(A) + abs(B)$
 #todo[Demostración]
