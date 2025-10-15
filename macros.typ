@@ -60,7 +60,7 @@
 }
 
 // hay que mejorarla a esta...
-#let example(body, color: blue) = {
+#let example(body, color: blue, title: "ejemplo") = {
 	set text(size:14pt)
 	align(center)[
 		#block(
@@ -71,7 +71,7 @@
 			stroke: (left: 3pt + color)
 		)[
 			#align(left)[
-				#smallcaps(text(fill: color, size: 18pt)[*ejemplo: *])
+				#smallcaps(text(fill: color, size: 18pt)[*#title: *])
 				#body
 			]
 		]
