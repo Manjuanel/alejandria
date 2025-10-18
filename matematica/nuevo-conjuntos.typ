@@ -1,17 +1,13 @@
 #import "../macros.typ": *
-#import "../style.typ": * 
+#import "../style.typ": *
 
-#let title = "Conjuntos"
-#let author = "Hirch, Juan Manuel"
-#let color = blue 
+#let color = blue
 
 #show: init.with(
-	title: title,
-	author: author,
-	color: color,
-	full_title: false,
-	font_size: 13pt,
-	//debug: true
+  title: "Conjuntos",
+  author: "Hirch, Juan Manuel",
+  color: color,
+  debug: true
 )
 
 == Nociones primitivas
@@ -22,7 +18,7 @@ Sea $A$ un conjunto, entonces si $a, b, c$ pertenecen a $A$ y son los únicos el
 
 === Definición por comprensión
 Sea $p(x)$ una proposición abierta y $A$ un conjunto, el nuevo conjunto $B$ que contiene todos los elementos $x$ de $A$ tal que $p(x)$ es verdadera es por $B = {x in A: p(x)}$.
-#example(color : color, title: "aclaracion")[
+#example(color: color, title: "aclaración")[
 
 Se cumplen:
 - ${x in A: p(x)} = {x in universe: x in A and p(x)}$
@@ -43,7 +39,7 @@ Existe un único conjunto vacío. Sea $A$ un conjunto, si no existe ningún $x$ 
 === Lema
 Sea $A$ un conjunto, entonces $emptyset subset.eq A$ y si $A$ tiene al menos un elemento se cumple $emptyset subset A$.
 
-== Comparacion de conjuntos
+== Comparación de conjuntos
 === Igualdad de conjuntos
 Se dice que dos conjuntos $A$ y $B$ son iguales y se nota $A = B$ si $x in A <=> x in B$.
 
@@ -53,13 +49,12 @@ Decimos que un conjunto $A$ esta contenido en el conjunto $B$ o que $A$ es subco
 === Contención estricta
 Se dice que $A$ esta contenido estrictamente en $B$ y se nota $A subset B$ si se cumple $A subset.eq B and A != B$.
 
-#example(color : color, title: "propiedades")[
-
-Para los conjuntos $A$, $B$ y $C$ siempre se cumple
-+ $A subset.eq A$
-+ $A = B <=> A subset.eq B and B subset.eq A$
-+ $A subset.eq B and B subset.eq C => A subset.eq C$
-+ $A subset B and B subset C => A subset C$
+#example(color: color, title: "propiedades")[
+  Para los conjuntos $A$, $B$ y $C$ siempre se cumple
+  + $A subset.eq A$
+  + $A = B <=> A subset.eq B and B subset.eq A$
+  + $A subset.eq B and B subset.eq C => A subset.eq C$
+  + $A subset B and B subset C => A subset C$
 ]
 
 == Diagramas de Venn
@@ -71,10 +66,10 @@ Para los conjuntos $A$, $B$ y $C$ siempre se cumple
 === Cardinalidad de conjuntos finitos
 La cardinalidad de un conjunto finito es igual a la cantidad de elementos que contiene. Si $A$ es un conjunto entonces $|A|$ es la cardinalidad de $A$. Un conjunto finito informalmente es aquel que tiene una cantidad contable de elementos.
 
-#example(color : color, title: "propiedades")[
-- $A subset.eq B => |A| <= |B|$
-- $A subset B => |A| < |B|$
-- $|emptyset| = 0$
+#example(color: color, title: "propiedades")[
+  - $A subset.eq B => |A| <= |B|$
+  - $A subset B => |A| < |B|$
+  - $|emptyset| = 0$
 ]
 == Cardinalidad de conjuntos infinitos
 #todo[No es prioridad]
@@ -82,8 +77,8 @@ La cardinalidad de un conjunto finito es igual a la cantidad de elementos que co
 == Conjunto de partes
 Sea $A$ un conjunto, el conjunto de partes de $A$ es $powerset(A) = {X in universe : X subset.eq A}$
 
-#example(color : color, title: "propiedades")[
-- $|A| = n => |powerset(A)| = 2^n = 2^(|A|)$
+#example(color: color, title: "propiedades")[
+  - $|A| = n => |powerset(A)| = 2^n = 2^(|A|)$
 ]
 
 == Operaciones con conjuntos
@@ -92,35 +87,33 @@ Dados los conjuntos $A$, $B$ y $C$ se definen las siguientes operaciones.
 === Union
 La union de $A$ y $B$ es $A union B$ tal que $x in A union B => x in A or x in B$
 
-#example(color : color, title: "propiedades")[
-+ $A = A union A$
-+ $A union B = B union A$
-+ $A subset.eq A union B$
-+ $A subset.eq B <=> A union B = B$
-+ $A union (B union C)$ = $(A union B) union C$
+#example(color: color, title: "propiedades")[
+  + $A = A union A$
+  + $A union B = B union A$
+  + $A subset.eq A union B$
+  + $A subset.eq B <=> A union B = B$
+  + $A union (B union C)$ = $(A union B) union C$
 ]
-
-#pagebreak()
 
 === Intersección
 La union de $A$ y $B$ es $A inter B = {x in A: x in B}$
 
-#example(color : color, title: "propiedades")[
-+ $A = A inter A$
-+ $A inter B = B inter A$
-+ $A inter B subset.eq A$
-+ $A subset.eq B <=> A inter B = A$
-+ $A inter (B inter C)$ = $(A inter B) inter C$
+#example(color: color, title: "propiedades")[
+  + $A = A inter A$
+  + $A inter B = B inter A$
+  + $A inter B subset.eq A$
+  + $A subset.eq B <=> A inter B = A$
+  + $A inter (B inter C)$ = $(A inter B) inter C$
 ]
 === Diferencia
 El conjunto diferencia de $A$ y $B$ es $A - B = {x in A: x in.not B}$
 
-#example(color : color, title: "propiedades")[
-+ $A - A = emptyset$
-+ $A - emptyset = A$
-+ $B - A subset.eq B$
-    - $emptyset - A = emptyset$
-+ $A - B = B - A => A = B$
+#example(color: color, title: "propiedades")[
+  + $A - A = emptyset$
+  + $A - emptyset = A$
+  + $B - A subset.eq B$
+      - $emptyset - A = emptyset$
+  + $A - B = B - A => A = B$
 // Demostración:
 //     - #([
 // #set align(left)
@@ -141,15 +134,15 @@ El conjunto diferencia de $A$ y $B$ es $A - B = {x in A: x in.not B}$
 // $A - B = emptyset and B - A = emptyset$\
 // $A - B = B - A$\
 // ])
-+ $(A - B) - C subset.eq A - (B - C)$
+  + $(A - B) - C subset.eq A - (B - C)$
 ]
 === Complemento
 Al complemento de $A$ es $overline(A) = universe - A = {x in universe: x in.not A}$
 
-#example(color : color, title: "propiedades")[
-Para algún $A subset.eq universe$
-+ $A inter overline(A) = emptyset$
-+ $A union overline(A) = universe$
+#example(color: color, title: "propiedades")[
+  Para algún $A subset.eq universe$
+  + $A inter overline(A) = emptyset$
+  + $A union overline(A) = universe$
 ]
 
 #pagebreak()
@@ -158,45 +151,36 @@ Para algún $A subset.eq universe$
 
 Dados $A$, $B$ y $C$ incluidos en $universe$:
 
-#v(1.5cm)
-
-#align(center)[
-- $overline(overline(A)) = A$ #h(3fr) #text(color)[*Ley de doble negación*]
-
+\
+- $overline(overline(A)) = A$ #h(1fr)
+  #text(color)[*Ley de doble negación*]
 #line(length: 100%)
-- $overline(A union B) = overline(A) inter overline(B)$ #h(3fr) 
-
-	$overline(A union B) = overline(A) inter overline(B)$ #h(3fr) #text(color)[*Leyes de De Morgan*]
-
+- $overline(A union B) = overline(A) inter overline(B)$ \
+  $overline(A union B) = overline(A) inter overline(B)$ #h(3fr)
+  #text(color)[*Leyes de De Morgan*]
 #line(length: 100%)
-- $A union B = B union A$ #h(3fr)		 
-	 
-	$A inter B = B inter A$ #h(3fr) #text(color)[*Leyes Conmutativas*]
-
+- $A union B = B union A$ \
+  $A inter B = B inter A$ #h(1fr)
+  #text(color)[*Leyes Conmutativas*]
 #line(length: 100%)
-- $A union (B union C) = (A union B) union C$ #h(3fr)		 
-
-	$A union (B union C) = (A union B) union C$ #h(3fr) #text(color)[*Leyes Asociativas*]
-
+- $A union (B union C) = (A union B) union C$ \
+  $A union (B union C) = (A union B) union C$ #h(1fr)
+  #text(color)[*Leyes Asociativas*]
 #line(length: 100%)
-- $A inter (B union C) = (A inter B) union (A inter C)$ #h(3fr)		 
-	 
-	$A union (B inter C) = (A union B) inter (A union C)$ #h(3fr) #text(color)[*Leyes Distributivas*]
-
+- $A inter (B union C) = (A inter B) union (A inter C)$ \
+  $A union (B inter C) = (A union B) inter (A union C)$ #h(1fr)
+  #text(color)[*Leyes Distributivas*]
 #line(length: 100%)
-- $A union A = A$ #h(3fr)		 
-	 
-	$A inter A = A$ #h(3fr) #text(color)[*Leyes Idempotentes*]
-
+- $A union A = A$ \
+  $A inter A = A$ #h(1fr)
+  #text(color)[*Leyes Idempotentes*]
 #line(length: 100%)
-- $A union emptyset = A$ #h(3fr)		 
-	 
-	$A inter universe = A$ #h(3fr) #text(color)[*Leyes de Identidad*]
-
+- $A union emptyset = A$ \
+  $A inter universe = A$ #h(1fr)
+  #text(color)[*Leyes de Identidad*]
 #line(length: 100%)
-- $A union (A inter B) = A$ #h(3fr)		 
-	 
-	$A inter (A union B) = A$ #h(3fr) #text(color)[*Leyes de Absorcion*]
-]
+- $A union (A inter B) = A$ \
+  $A inter (A union B) = A$ #h(1fr)
+  #text(color)[*Leyes de Absorción*]
 
 
