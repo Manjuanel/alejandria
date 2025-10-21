@@ -11,6 +11,8 @@ Este documento intentará ser de ayuda para mantener una estructura de contenido
 == La librería
 Se recomienda fuertemente utilizar y aprender los elementos y funciones definidos en la librería ya que pueden ser de ayuda para eliminar la necesidad de duplicar definiciones y repetir código. Además proporcionan una manera sencilla de asegurarse que el estilo y la estructura de la información sea predecible.
 
+Las funciones y las definiciones provistas por la librería (biblioteca) están nombrados en ingles debido a que es más coherente para programarlo. El ingles carece de tildes y en general el lenguaje `typst` está pensado en ingles. Además hace de buena separación entre la librería y el documento.
+
 === En defecto de buena documentación...
 En defecto de buena documentación siempre es buena idea revisar varios de los apuntes ya presentes y observar si ya hay alguna forma relativamente establecida de estilizar un tipo de contenido. Luego se puede extrapolar para conseguir resultados parecidos aceptables. Si tal patrón reconocible y extrapolable no existe se anima al posible contribuyente discutir un posible formato y agregar a este documento o al pertinente la documentación necesaria para el próximo en la fila.
 

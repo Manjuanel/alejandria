@@ -75,3 +75,10 @@
     ]
   ]
 }
+
+#let wide_list(color: blue, ..args) = {
+  args.pos()
+      .chunks(2, exact: true)
+      .map(x => [- #x.first() #h(1fr) #text(color, strong(x.last()))])
+      .join(line(length: 100%))
+}

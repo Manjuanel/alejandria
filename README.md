@@ -23,17 +23,17 @@ Luego con el visor de preferencia del lector abre el archivo generado.
 Para que los apuntes mantengan una estética mínimamente coherente dejo un documento llamado `estilo_y_normas.typ` que dará reglas generales para que los estilos de los apuntes se mantengan estables. Se apunta a una guía estructural que ayude a usar los elementos y herramientas de la librería.
 
 ## Para hacer
-- [ ] Agrupar apuntes en "libros", después de todo la ultra fragmentación que hay ahora no es práctica.
-- [ ] Rehacer el estilo (en proceso)
-- [ ] Repensar las features y funciones disponibles y hacer una nueva lista con especificación minima pero existente
-  - Aclaración: mejorar la documentación
-- [ ] Rehacer la función casesAlign()
-- [ ] Renombrar todo lo que este en ingles de forma innecesaria al español (esto no incluye la mayoría de los símbolos y funciones predefinidos por typst).
-- [ ] Migrar todos los apuntes
-- [ ] Reordenar los directorios, posiblemente borrar `pdfs/`
-- [ ] Hacer un directorio de ejemplos
+- [x] Rehacer el estilo
+- [x] Renombrar los archivos al español (no los macros ni el estilo)
+- [x] Eliminar `#set block(spacing: 2.5mm)` porque tiene consecuencias globales semi-inesperadas.
+- [x] Agregar las listas separadas por lineas a los macros (las que están en los ejemplos)
+- [x] Mover `style.typ` a `estilo.typ`
+- [x] Hacer un directorio de ejemplos
 - [x] Mover el TODO LIST al README.md y ponerle tildes y eso
-- [ ] Compatibilizar estilo y normas con los ejemplos, "rediseñar" para que convivan cómodamente.
-- [ ] `#set block(spacing: 2.5mm)` tiene consecuencias raras, sobretodo se notan al poner una formula de bloque (multi linea)
-- [ ] Agregar las listas separadas por lineas a los macros (las que están en los ejemplos)
-- [ ] Mover `style.typ` a `estilo.typ`
+- [ ] Migrar todos los apuntes
+- [ ] Agrupar apuntes en "libros", después de todo la ultra fragmentación que hay ahora no es práctica.
+- [ ] Repensar las funciones disponibles y hacer una lista que las documente
+- [ ] Rehacer la función casesAlign()
+- [ ] Borrar `pdfs/`
+- [ ] Hacer ejemplos mostrando todas las capacidades de las librerías y mostrando el estilo para descargar `estilos_y_normas.typ`
+- [ ] Hacer posible una configuración global del color de los elementos que no requiera de pasar el color en todas las funciones (posiblemente implementando estado).

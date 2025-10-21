@@ -72,9 +72,6 @@
     #strong(smallcaps(it))
   ]
 
-  // TODO: remove this
-  //set block(spacing: 2.5mm)
-
   set list(indent: 0.8cm, tight: true)
 
   show list: it => [

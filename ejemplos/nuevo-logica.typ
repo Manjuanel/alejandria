@@ -40,44 +40,46 @@ Dos proposiciones $s_1, s_2$ son _lógicamente equivalentes_ si tienen la misma 
 == Leyes de la Lógica
 Sean $p,q,r$ proposiciones primitivas, $T_0$ y $F_0$ una _tautología_ y _contradicción_ respectivamente, se cumplen:
 
-- $not not p iff p$ #h(3fr)
-  #text(color)[*Ley de doble negación*]
-#line(length: 100%)
-- $not(p or q) iff not p and not q$ \
-  $not(p and q) iff not p or not q$ #h(3fr)
-  #text(color)[*Leyes de De Morgan*]
-#line(length: 100%)
-- $p or q iff q or p$ \
-  $p and q iff q and p$ #h(3fr)
-  #text(color)[*Leyes Conmutativas*]
-#line(length: 100%)
-- $p or (q or r) iff (p or q) or r$ \
-  $p and (q and r) iff (p and q) and r$ #h(3fr)
-  #text(color)[*Leyes Asociativas*]
-#line(length: 100%)
-- $p or (q and r) iff (p or q) and (p or r)$ \
-  $p and (q or r) iff (p and q) or (p and r)$ #h(3fr)
-  #text(color)[*Leyes Distributivas*]
-#line(length: 100%)
-- $p or p iff p$ \
-  $p and p iff p$ #h(3fr)
-  #text(color)[*Leyes Idempotentes*]
-#line(length: 100%)
-- $p or F_0 iff p$ \
-  $p and T_0 iff p$ #h(3fr)
-  #text(color)[*Leyes de Neutro*]
-#line(length: 100%)
-- $p or not p iff T_0$ \
-  $p and not p iff F_0$ #h(3fr)
-  #text(color)[*Leyes Inversas*]
-#line(length: 100%)
-- $p or T_0 iff T_0$ \
-  $p and F_0 iff F_0$ #h(3fr)
-  #text(color)[*Leyes de Dominación*]
-#line(length: 100%)
-- $p and (p or q) iff p$ \
-  $p or (p and q) iff p$ #h(3fr)
-  #text(color)[*Leyes de Absorción*]
+#wide_list(
+  [$not not p iff p$],
+  [Ley de doble negación],
+
+  [$not(p or q) iff not p and not q$ \
+  $not(p and q) iff not p or not q$],
+  [Leyes de De Morgan],
+
+  [$p or q iff q or p$ \
+  $p and q iff q and p$],
+  [Leyes Conmutativas],
+
+  [$p or (q or r) iff (p or q) or r$ \
+  $p and (q and r) iff (p and q) and r$],
+  [Leyes Asociativas],
+
+  [$p or (q and r) iff (p or q) and (p or r)$ \
+  $p and (q or r) iff (p and q) or (p and r)$],
+  [Leyes Distributivas],
+
+  [$p or p iff p$ \
+  $p and p iff p$],
+  [Leyes Idempotentes],
+
+  [$p or F_0 iff p$ \
+  $p and T_0 iff p$],
+  [Leyes de Neutro],
+
+  [$p or not p iff T_0$ \
+  $p and not p iff F_0$],
+  [Leyes Inversas],
+
+  [$p or T_0 iff T_0$ \
+  $p and F_0 iff F_0$],
+  [Leyes de Dominación],
+
+  [$p and (p or q) iff p$ \
+  $p or (p and q) iff p$],
+  [Leyes de Absorción]
+)
 
 == Inferencia
 === Argumento

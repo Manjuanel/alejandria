@@ -151,36 +151,37 @@ Al complemento de $A$ es $overline(A) = universe - A = {x in universe: x in.not 
 
 Dados $A$, $B$ y $C$ incluidos en $universe$:
 
-\
-- $overline(overline(A)) = A$ #h(1fr)
-  #text(color)[*Ley de doble negación*]
-#line(length: 100%)
-- $overline(A union B) = overline(A) inter overline(B)$ \
-  $overline(A union B) = overline(A) inter overline(B)$ #h(3fr)
-  #text(color)[*Leyes de De Morgan*]
-#line(length: 100%)
-- $A union B = B union A$ \
-  $A inter B = B inter A$ #h(1fr)
-  #text(color)[*Leyes Conmutativas*]
-#line(length: 100%)
-- $A union (B union C) = (A union B) union C$ \
-  $A union (B union C) = (A union B) union C$ #h(1fr)
-  #text(color)[*Leyes Asociativas*]
-#line(length: 100%)
-- $A inter (B union C) = (A inter B) union (A inter C)$ \
-  $A union (B inter C) = (A union B) inter (A union C)$ #h(1fr)
-  #text(color)[*Leyes Distributivas*]
-#line(length: 100%)
-- $A union A = A$ \
-  $A inter A = A$ #h(1fr)
-  #text(color)[*Leyes Idempotentes*]
-#line(length: 100%)
-- $A union emptyset = A$ \
-  $A inter universe = A$ #h(1fr)
-  #text(color)[*Leyes de Identidad*]
-#line(length: 100%)
-- $A union (A inter B) = A$ \
-  $A inter (A union B) = A$ #h(1fr)
-  #text(color)[*Leyes de Absorción*]
+#wide_list(
+  $overline(overline(A)) = A$,
+  [Ley de doble negación],
+
+  [$overline(A union B) = overline(A) inter overline(B)$ \
+  $overline(A inter B) = overline(A) union overline(B)$],
+  [Leyes de De Morgan],
+
+  [$A union B = B union A$ \
+  $A inter B = B inter A$],
+  [Leyes Conmutativas],
+
+  [$A union (B union C) = (A union B) union C$ \
+  $A union (B union C) = (A union B) union C$],
+  [Leyes Asociativas],
+
+  [$A inter (B union C) = (A inter B) union (A inter C)$ \
+  $A union (B inter C) = (A union B) inter (A union C)$],
+  [Leyes Distributivas],
+
+  [$A union A = A$ \
+  $A inter A = A$],
+  [Leyes Idempotentes],
+
+  [$A union emptyset = A$ \
+  $A inter universe = A$],
+  [Leyes de Identidad],
+
+  [$A union (A inter B) = A$ \
+  $A inter (A union B) = A$],
+  [Leyes de Absorción]
+)
 
 
