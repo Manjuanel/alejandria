@@ -36,3 +36,4 @@ Para que los apuntes mantengan una estética mínimamente coherente dejo un docu
 - [ ] Compatibilizar estilo y normas con los ejemplos, "rediseñar" para que convivan cómodamente.
 - [ ] `#set block(spacing: 2.5mm)` tiene consecuencias raras, sobretodo se notan al poner una formula de bloque (multi linea)
 - [ ] Agregar las listas separadas por lineas a los macros (las que están en los ejemplos)
+- [ ] Mover `style.typ` a `estilo.typ`

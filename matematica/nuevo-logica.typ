@@ -1,5 +1,5 @@
 #import "../macros.typ": *
-#import "../style.typ": *
+#import "../estilo.typ": *
 
 #let color = blue
 

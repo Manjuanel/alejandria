@@ -1,5 +1,5 @@
 #import "./macros.typ": *
-#import "./style.typ": *
+#import "./estilo.typ": *
 
 #show: init.with(
   title: "Estilo y Normas",
@@ -87,7 +87,7 @@ En general se recomienda copiar el usado en los archivos ya presentes, principal
 
 ```typst
 #import "../macros.typ": *
-#import "../style.typ": *
+#import "../estilo.typ": *
 
 #show: init.with(title: "Título muy interesante", author: none)
 
