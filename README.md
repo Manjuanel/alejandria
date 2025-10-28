@@ -32,6 +32,7 @@ Para que los apuntes mantengan una estética mínimamente coherente dejo un docu
 - [x] Mover el TODO LIST al README.md y ponerle tildes y eso
 - [ ] Migrar todos los apuntes
 - [ ] Agrupar apuntes en "libros", después de todo la ultra fragmentación que hay ahora no es práctica.
+- [ ] Juntar los apuntes de funciones y relaciones
 - [ ] Repensar las funciones disponibles y hacer una lista que las documente
 - [ ] Rehacer la función casesAlign()
 - [ ] Borrar `pdfs/`

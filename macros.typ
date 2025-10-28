@@ -13,6 +13,7 @@
 #let powerset = "\u{1D4AB}"
 #let Dom = "Dom"
 #let Codom = "Codom"
+#let functions = "\u{1D4D5}"
 // functions
 #let Im = "Im"
 #let Rec = "Rec"
