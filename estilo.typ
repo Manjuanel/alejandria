@@ -7,15 +7,17 @@
 
 #let _debug = state("debug_mode", false)
 
-#let todo(hide: false, content) = {
-  context(
-    if _debug.get() {
-      set text(size: 16pt, fill: red, font: "DejaVu Sans Mono")
-      strong([[TODO: #content]])
-      linebreak()
-    }
-  )
-}
+#let note(content) = context(
+  if _debug.get() { super(emph(text(fill: red, content))) }
+)
+
+#let todo(hide: false, content) = context(
+  if _debug.get() {
+    set text(fill: red)
+    lower(smallcaps(strong(content)))
+    linebreak()
+  }
+)
 
 /////// STYLE ///////
 
@@ -71,9 +73,6 @@
     #show repeat: none
     #strong(smallcaps(it))
   ]
-
-  // TODO: remove this
-  //set block(spacing: 2.5mm)
 
   set list(indent: 0.8cm, tight: true)
 

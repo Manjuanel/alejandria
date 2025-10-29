@@ -1,5 +1,5 @@
-#import "../lib.typ" : *
-#show: init.with(debug: true)
+#import "../macros.typ": *
+#import "../estilo.typ": *
 
 //Por comodidad resumo los nombres de las relaciones R, S, T
 #let Rr = $"\u{1D4E1}"$
@@ -9,7 +9,12 @@
 #let nSr = $cancel("\u{1D4E2}", angle: #38deg ,stroke: #(thickness: 1pt))$
 #let nTr = $cancel("\u{1D4E3}", angle: #38deg ,stroke: #(thickness: 1pt))$
 
-#title[Relaciones]
+#show: init.with(
+  title: "Relaciones",
+  author: none,
+  debug: true
+)
+
 #todo[Faltan hacer todos los gráficos]
 
 = Pares ordenados
