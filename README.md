@@ -36,6 +36,7 @@ Para que los apuntes mantengan una estética mínimamente coherente dejo un docu
 - [ ] Eliminar la duplicación de la definición de cardinal de un conjunto
 - [ ] Repensar las funciones disponibles y hacer una lista que las documente
 - [ ] Rehacer la función casesAlign()
-- [ ] Borrar `pdfs/` y por siguiente las instrucciones de como usarlo y el script que compila todos los apuntes también
+- [ ] Borrar `pdfs/`, las instrucciones de como usarlo y `pdf_reloading.sh`
+- [ ] Publicar los pdfs como releases.
 - [ ] Hacer ejemplos mostrando todas las capacidades de las librerías y mostrando el estilo para sacarle exceso de contenido a  `estilos_y_normas.typ`
 - [ ] Hacer posible una configuración global del color de los elementos que no requiera de pasar el color en todas las funciones (posiblemente implementando estado).
