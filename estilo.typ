@@ -21,23 +21,21 @@
 
 /////// STYLE ///////
 
-#let title_fullpage(color: blue, title: none, author: none, ver: "v0.0") = {
+#let title_fullpage(color: blue, title: none, author: none) = {
   align(center)[
     #block(below: 85mm)
     #block(below: 7mm,text(size: 45pt, smallcaps(title)))
     #block(text(size: 17pt)[#author])
-    #block(text(size: 13pt)[#ver])
     #pagebreak()
     #outline(title: text(fill: color, size: 22pt)[Contents])
   ]
 }
 
-#let title_halfpage(color: blue, title: none, author: none, ver: "v0.0") = {
+#let title_halfpage(color: blue, title: none, author: none) = {
   align(center)[
     #block(below: 30mm)
     #block(below: 7mm, text(size: 45pt, smallcaps(title)))
     #block(text(size: 17pt)[#author])
-    #block(above: 3mm, text(size: 13pt)[#ver])
     #outline(title: text(fill: color, size: 22pt)[Contents])
   ]
 }
