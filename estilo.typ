@@ -41,7 +41,7 @@
 }
 
 #let init(
-  first-page: false,
+  first_page: false,
   title: "Titulo",
   author: "Alejandria",
   color: blue,
@@ -115,20 +115,18 @@
 //    #set text(18pt, weight: "bold")
 //    #block((it.body))
 //  ]
-  if first-page == true {
+  if first_page == true {
     if full_title == true [
       #title_fullpage(
         color: color,
         title: text(50pt, title),
         author: author,
-        ver: ver
       )
     ] else [
       #title_halfpage(
         color: color,
         title: text(50pt, title),
         author: author,
-        ver: ver
       )
     ]
     pagebreak()
